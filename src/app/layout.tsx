@@ -1,4 +1,6 @@
 import { Providers } from "@/app/providers";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,13 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          inter.className,
-          "dark text-foreground bg-background min-h-screen"
-        )}
-      >
-        <Providers>{children}</Providers>
+      <body className={cn(inter.className, "min-h-screen pt-16")}>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
