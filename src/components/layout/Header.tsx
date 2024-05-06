@@ -1,24 +1,58 @@
 import { Icons } from "@/components/Icons";
-import MainNav from "@/components/layout/MainNav";
-import { siteConfig } from "@/lib/config";
+import { routesConfig, siteConfig } from "@/lib/config";
 import { Link } from "@nextui-org/link";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarMenuToggle,
+} from "@nextui-org/navbar";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import MobileNav from "./MobileNav";
+import NavLink from "./NavLink";
 
-type Props = {};
-
-export default function Header({}: Props) {
+export default function Header() {
   return (
-    <header className="h-16 fixed top-0 w-full z-50 backdrop-blur-sm">
-      <nav className="container max-w-7xl mx-auto px-8 flex justify-between items-center h-full">
-        <Link href={siteConfig.url} color="foreground">
-          <Icons.logo className="mr-3" />
-          <span className="font-semibold">Makje</span>
-        </Link>
+    <Navbar classNames={navbarClassNames}>
+      <NavbarContent>
+        <NavbarBrand>
+          <Link href={siteConfig.url} color="foreground">
+            <Icons.logo className="mr-3 size-10" />
+            <span className="font-semibold text-xl">Makje</span>
+          </Link>
+        </NavbarBrand>
+      </NavbarContent>
 
-        <MainNav />
-        <MobileNav />
-      </nav>
-    </header>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        {routesConfig.mainNav.map((item) => (
+          <NavLink key={item.href} item={item} />
+        ))}
+
+        <ThemeSwitcher isIconOnly={true} />
+      </NavbarContent>
+
+      <NavbarContent className="flex sm:hidden" justify="end">
+        <NavbarMenuToggle icon={<Icons.menu />} className="h-9 w-9 p-1" />
+      </NavbarContent>
+
+      <MobileNav />
+    </Navbar>
   );
 }
+
+const navbarClassNames = {
+  item: [
+    "flex",
+    "relative",
+    "h-full",
+    "items-center",
+    "data-[active=true]:after:content-['']",
+    "data-[active=true]:after:absolute",
+    "data-[active=true]:after:bottom-1/4",
+    "data-[active=true]:after:left-0",
+    "data-[active=true]:after:right-0",
+    "data-[active=true]:after:h-[10px]",
+    "data-[active=true]:after:rounded-[2px]",
+    "data-[active=true]:after:bg-gradient-to-t from-primary-600",
+  ],
+};
