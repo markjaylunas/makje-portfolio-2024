@@ -13,7 +13,7 @@ import NavLink from "./NavLink";
 
 export default function Header() {
   return (
-    <Navbar classNames={navbarClassNames}>
+    <Navbar maxWidth="2xl" classNames={navbarClassNames}>
       <NavbarContent>
         <NavbarBrand>
           <Link href={siteConfig.url} color="foreground">
