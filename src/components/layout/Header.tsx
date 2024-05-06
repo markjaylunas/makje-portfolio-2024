@@ -16,7 +16,7 @@ export default function Header() {
     <Navbar maxWidth="2xl" classNames={navbarClassNames}>
       <NavbarContent>
         <NavbarBrand>
-          <Link href={siteConfig.url} color="foreground">
+          <Link href={siteConfig.url} color="foreground" className="rounded-md">
             <Icons.logo className="mr-3 size-10" />
             <span className="font-semibold text-xl">Makje</span>
           </Link>
