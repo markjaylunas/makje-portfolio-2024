@@ -19,12 +19,12 @@ interface RoutesConfig {
 export const routesConfig: RoutesConfig = {
   mainNav: [
     {
-      title: "Home",
-      href: "/",
-    },
-    {
       title: "Works",
       href: "/works",
+    },
+    {
+      title: "About",
+      href: "/about",
     },
     {
       title: "Contact",
