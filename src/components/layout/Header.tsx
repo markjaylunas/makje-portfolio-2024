@@ -32,7 +32,7 @@ const navbarClassNames = {
     "data-[active=true]:after:bottom-1/4",
     "data-[active=true]:after:left-0",
     "data-[active=true]:after:right-0",
-    "data-[active=true]:after:h-[10px]",
+    "data-[active=true]:after:h-[5px]",
     "data-[active=true]:after:rounded-[2px]",
     "data-[active=true]:after:bg-gradient-to-t from-primary-600",
   ],

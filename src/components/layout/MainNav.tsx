@@ -1,4 +1,4 @@
-import { routesConfig, siteConfig } from "@/lib/config";
+import { routesConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { Link } from "@nextui-org/link";
 import { NavbarBrand, NavbarContent } from "@nextui-org/navbar";
@@ -15,10 +15,11 @@ export default function MainNav({ isMenuOpen }: Props) {
     <>
       <NavbarContent>
         <NavbarBrand>
-          <Link href={siteConfig.url} color="foreground" className="rounded-md">
+          <Link href="/" color="foreground" className="rounded-md">
             <Icons.logo className="mr-3 size-10" />
             <span className="font-medium text- text-xl">Makje</span>
           </Link>
+
           <ThemeSwitcher
             variant="flat"
             className={cn("hidden ml-4", isMenuOpen && "flex")}
