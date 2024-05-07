@@ -10,7 +10,6 @@ import {
 } from "@nextui-org/navbar";
 import { usePathname } from "next/navigation";
 import { Icons } from "../Icons";
-import { ThemeSwitcher } from "../ThemeSwitcher";
 import RotateIcon from "../motion/RotateIcon";
 
 type Props = {
