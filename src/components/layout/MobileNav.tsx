@@ -3,8 +3,8 @@
 import { Icons } from "@/components/Icons";
 import AppearUp from "@/components/motion/AppearUp";
 import RotateIcon from "@/components/motion/RotateIcon";
+import MyLink from "@/components/ui/MyLink";
 import { routesConfig } from "@/lib/config";
-import { Link } from "@nextui-org/link";
 import {
   NavbarContent,
   NavbarMenu,
@@ -40,14 +40,13 @@ export default function MobileNav({ isMenuOpen }: Props) {
                 isActive={pathname === item.href}
                 className="relative data-[active=true]:after:content-[''] data-[active=true]:after:absolute data-[active=true]:after:bottom-1/6 data-[active=true]:after:left-0 data-[active=true]:after:right-0 data-[active=true]:after:h-[5px] data-[active=true]:after:rounded-[2px] data-[active=true]:after:bg-gradient-to-t from-primary-600"
               >
-                <Link
+                <MyLink
                   className="w-full text-3xl flex justify-center items-center"
                   href={item.href}
-                  size="lg"
                   color="foreground"
                 >
                   {item.title}
-                </Link>
+                </MyLink>
               </NavbarMenuItem>
             </AppearUp>
           </Fragment>

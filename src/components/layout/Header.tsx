@@ -1,9 +1,9 @@
 "use client";
 
+import MainNav from "@/components/layout/MainNav";
+import MobileNav from "@/components/layout/MobileNav";
 import { Navbar } from "@nextui-org/navbar";
 import { useState } from "react";
-import MainNav from "./MainNav";
-import MobileNav from "./MobileNav";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

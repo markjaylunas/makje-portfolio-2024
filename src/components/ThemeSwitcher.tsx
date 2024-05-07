@@ -1,12 +1,12 @@
 "use client";
 
+import { Icons } from "@/components/Icons";
+import FlipIcon from "@/components/motion/FlipIcon";
 import { cn } from "@/lib/utils";
 import { Button, ButtonProps } from "@nextui-org/button";
 import { Skeleton } from "@nextui-org/skeleton";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Icons } from "./Icons";
-import FlipIcon from "./motion/FlipIcon";
 
 export function ThemeSwitcher(props: ButtonProps) {
   const [mounted, setMounted] = useState(false);

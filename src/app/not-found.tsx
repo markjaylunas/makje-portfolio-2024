@@ -1,7 +1,7 @@
 import { Icons } from "@/components/Icons";
 import BackButton from "@/components/ui/BackButton";
+import MyLink from "@/components/ui/MyLink";
 import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
 
 export default async function NotFound() {
   return (
@@ -22,14 +22,14 @@ export default async function NotFound() {
         >
           Get back
         </BackButton>
-        <Link href="/">
+        <MyLink href="/">
           <Button
             color="primary"
             startContent={<Icons.home className="size-4" />}
           >
             Get to home page
           </Button>
-        </Link>
+        </MyLink>
       </div>
     </main>
   );

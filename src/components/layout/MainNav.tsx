@@ -1,10 +1,11 @@
+import { Icons } from "@/components/Icons";
+import NavLink from "@/components/layout/NavLink";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import MyLink from "@/components/ui/MyLink";
 import { routesConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
-import { Link } from "@nextui-org/link";
 import { NavbarBrand, NavbarContent } from "@nextui-org/navbar";
-import { Icons } from "../Icons";
-import { ThemeSwitcher } from "../ThemeSwitcher";
-import NavLink from "./NavLink";
+import Link from "next/link";
 
 type Props = {
   isMenuOpen: boolean;
@@ -15,10 +16,10 @@ export default function MainNav({ isMenuOpen }: Props) {
     <>
       <NavbarContent>
         <NavbarBrand>
-          <Link href="/" color="foreground" className="rounded-md">
+          <MyLink as={Link} href="/" color="foreground" className="rounded-md">
             <Icons.logo className="mr-3 size-10" />
             <span className="font-medium text- text-xl">Makje</span>
-          </Link>
+          </MyLink>
 
           <ThemeSwitcher
             variant="flat"
