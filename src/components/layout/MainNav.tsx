@@ -17,7 +17,7 @@ export default function MainNav({ isMenuOpen }: Props) {
         <NavbarBrand>
           <Link href={siteConfig.url} color="foreground" className="rounded-md">
             <Icons.logo className="mr-3 size-10" />
-            <span className="font-semibold text-xl">Makje</span>
+            <span className="font-medium text- text-xl">Makje</span>
           </Link>
           <ThemeSwitcher
             variant="flat"

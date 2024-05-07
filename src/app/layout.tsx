@@ -1,12 +1,12 @@
 import { Providers } from "@/app/providers";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { cn } from "@/lib/utils";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { cn } from "@/lib/utils";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(inter.className, "min-h-screen")}>
+    <html lang="en" className={cn(GeistSans.variable, GeistMono.variable)}>
+      <body className="min-h-screen">
         <Providers>
           <Header />
           {children}
