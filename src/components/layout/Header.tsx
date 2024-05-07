@@ -16,7 +16,7 @@ export default function Header() {
     >
       <MainNav isMenuOpen={isMenuOpen} />
 
-      <MobileNav isMenuOpen={isMenuOpen} />
+      <MobileNav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </Navbar>
   );
 }

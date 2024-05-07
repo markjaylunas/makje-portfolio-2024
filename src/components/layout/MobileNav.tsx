@@ -12,13 +12,14 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { usePathname } from "next/navigation";
-import { Fragment } from "react";
+import { Dispatch, Fragment, SetStateAction } from "react";
 
 type Props = {
   isMenuOpen: boolean;
+  setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function MobileNav({ isMenuOpen }: Props) {
+export default function MobileNav({ isMenuOpen, setIsMenuOpen }: Props) {
   const pathname = usePathname();
 
   return (
@@ -44,6 +45,7 @@ export default function MobileNav({ isMenuOpen }: Props) {
                   className="w-full text-3xl flex justify-center items-center"
                   href={item.href}
                   color="foreground"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.title}
                 </MyLink>
